@@ -34,9 +34,7 @@ body {
 	}
 }
 .wrapper {
-
 	min-height: 100%;
-
 }
 
 [class*="__container"] {
@@ -78,8 +76,8 @@ body {
 		padding: toRem(20) toRem(35);
 		border-radius: toRem(40);
 		border: toRem(1) solid white;
-		transition: box-shadow 0.3s ease; // Плавний ефект
-
+		transition: box-shadow 0.3s ease;
+		z-index:20;
 		&:hover {
 			box-shadow: 0 toRem(10) toRem(20) rgba(255, 255, 255, 0.3);
 		}
@@ -97,7 +95,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	@media(max-width: toEm(1200)){
+	@media (max-width: toEm(1200)) {
 		min-height: 500px;
 	}
 
