@@ -167,31 +167,10 @@ body.menu-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1.25rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-@media (min-width: 75em) {
-  .header__container {
-    gap: 6.25rem;
-  }
-}
-@media (min-width: 50em) and (max-width: 75em) {
-  @supports (gap: clamp( 1.875rem , -6.875rem  +  17.5vw , 6.25rem )) {
-    .header__container {
-      gap: clamp( 1.875rem , -6.875rem  +  17.5vw , 6.25rem );
-    }
-  }
-  @supports not (gap: clamp( 1.875rem , -6.875rem  +  17.5vw , 6.25rem )) {
-    .header__container {
-      gap: calc(1.875rem + 4.375 * (100vw - 50rem) / 25);
-    }
-  }
-}
-@media (max-width: 50em) {
-  .header__container {
-    gap: 1.875rem;
-  }
 }
 .header__logo {
   z-index: 20;
@@ -220,6 +199,11 @@ body.menu-open {
 .header__link:hover {
   -webkit-box-shadow: 0 0.625rem 1.25rem rgba(255, 255, 255, 0.3);
           box-shadow: 0 0.625rem 1.25rem rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 47.99875em) {
+  .header__link {
+    padding: 0.625rem 0.9375rem;
+  }
 }
 
 .hero {

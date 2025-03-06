@@ -57,7 +57,7 @@ body {
 		max-width: toRem(1640);
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 100, 30, $widthTo: 800);
+		gap: toRem(20);
 		justify-content: space-between;
 	}
 
@@ -82,6 +82,9 @@ body {
 		z-index: 20;
 		&:hover {
 			box-shadow: 0 toRem(10) toRem(20) rgba(255, 255, 255, 0.3);
+		}
+		@media(max-width: toEm(767.98)){
+					padding: toRem(10) toRem(15);
 		}
 	}
 }
