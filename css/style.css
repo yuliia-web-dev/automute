@@ -134,7 +134,9 @@ body.menu-open {
 .header {
   color: #fff;
   width: 100%;
-  z-index: 55;
+  position: relative;
+  z-index: 100;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.284);
 }
 @media (min-width: 75em) {
   .header {
@@ -248,7 +250,7 @@ body.menu-open {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,11 +263,6 @@ body.menu-open {
           justify-content: center;
   text-align: center;
 }
-@media (max-width: 75em) {
-  .hero {
-    min-height: 500px;
-  }
-}
 .hero__video {
   position: absolute;
   top: 50%;
@@ -277,6 +274,7 @@ body.menu-open {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -1;
 }
 .hero__content {
   position: relative;
