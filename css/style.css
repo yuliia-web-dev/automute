@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rubik:regular,500&display=swap");
 [class*=_icon-]::before {
   display: inline-block;
   font-family: "icons";
@@ -92,7 +92,7 @@ html {
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Rubik";
 }
 
 .wrapper {
@@ -241,16 +241,35 @@ body {
 }
 .header__logo {
   z-index: 20;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 2.5rem;
+  height: auto;
+}
+@media (min-width: 75em) {
+  .header__logo {
+    width: 14.8125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  @supports (width: clamp( 8.125rem , 5.6931818182rem  +  12.1590909091vw , 14.8125rem )) {
+    .header__logo {
+      width: clamp( 8.125rem , 5.6931818182rem  +  12.1590909091vw , 14.8125rem );
+    }
+  }
+  @supports not (width: clamp( 8.125rem , 5.6931818182rem  +  12.1590909091vw , 14.8125rem )) {
+    .header__logo {
+      width: calc(8.125rem + 6.6875 * (100vw - 20rem) / 55);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .header__logo {
+    width: 8.125rem;
+  }
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .header__link {
   text-transform: capitalize;
@@ -265,6 +284,8 @@ body {
   z-index: 20;
   position: relative;
   overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (min-width: 75em) {
   .header__link {
